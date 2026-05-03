@@ -1,4 +1,4 @@
 # Lean
 Clean, mean, and for all to be seen.
 
-[SCREENSHOTS](screenshots.md)
+[SCREENSHOTS](https://github.com/DelPyth/leanhud/tree/screenshots)
