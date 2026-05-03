@@ -1,0 +1,22 @@
+event HudLowAmmoPulse
+{
+	Animate     AmmoInReserve            FgColor    AmmoAlert    Linear    0.0      0.0
+	Animate     AmmoInClip               FgColor    AmmoAlert    Linear    0.0      0.0
+	Animate     AmmoNoClip               FgColor    AmmoAlert    Linear    0.0      0.0
+	RunEvent    HudLowAmmoPulseLoop      0.25
+}
+
+// call to loop HudLowAmmoPulse
+event HudLowAmmoPulseLoop
+{
+	RunEvent    HudLowAmmoPulse    0.0
+}
+
+event HudLowAmmoPulseStop
+{
+	StopEvent    HudLowAmmoPulse        0.0
+	StopEvent    HudLowAmmoPulseLoop    0.0
+	Animate      AmmoInReserve          FgColor    AmmoReserveNormal    Linear    0.0    0.0
+	Animate      AmmoInClip             FgColor    AmmoNormal           Linear    0.0    0.0
+	Animate      AmmoNoClip             FgColor    AmmoNormal           Linear    0.0    0.0
+}
